@@ -7,14 +7,16 @@ import { Menu } from 'antd';
 **/
 
 const SubMenu = Menu.SubMenu;
+
 const MenuItemGroup = Menu.ItemGroup;
 
 class Navigation extends Component {
+
     render() {
         return (
             <Menu mode="horizontal">
                 <Menu.Item key="home">
-                    <a href="">Home</a>
+                    <a href="/#">Home</a>
                 </Menu.Item>
                 <SubMenu title={<span>Listing</span>}>
                     <MenuItemGroup title="Item 1">
@@ -27,13 +29,13 @@ class Navigation extends Component {
                     </MenuItemGroup>
                 </SubMenu>
                 <Menu.Item key="property">
-                    <a href="">Property</a>
+                    <a href="/#">Property</a>
                 </Menu.Item>
                 <Menu.Item key="blog">
-                    <a href="">Blog</a>
+                    <a href="/#">Blog</a>
                 </Menu.Item>
                 <Menu.Item key="alipay">
-                    <a href="">Contact Us</a>
+                    <a href="/#">Contact Us</a>
                 </Menu.Item>
             </Menu>
         );

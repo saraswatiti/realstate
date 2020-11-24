@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "../ImgSlider/style.css";
-import PropTypes from 'prop-types'
 import { FigureWrap, PriceAmount } from '../../../style';
 
 /**
@@ -11,35 +10,31 @@ import { FigureWrap, PriceAmount } from '../../../style';
 * @class ImgSlider
 **/
 
-class ImgSlider extends Component {
+const ImgSlider = ({ alttitle, imgArray, price }) => {
 
-    render() {
-        const { imgurl, alttitle, imgArray, price } = this.props;
-        var settings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        };
-        return (
-            <Slider {...settings}>
-                {
-                    Array.isArray(imgArray) && imgArray.map((imgSlide) => (
-                        <FigureWrap key={imgSlide.id}>
-                            <img src={imgSlide.image_path} alt={alttitle} />
-                            <PriceAmount>{price}</PriceAmount>
-                        </FigureWrap>
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
 
-                    ))
-                }
+    return (
+        <Slider {...settings}>
+            {
+                Array.isArray(imgArray) && imgArray.map((imgSlide) => (
+                    <FigureWrap key={imgSlide.id}>
+                        <img src={imgSlide.image_path} alt={alttitle} style={{ width: '100%' }} />
+                        <PriceAmount>{price}</PriceAmount>
+                    </FigureWrap>
+                ))
+            }
 
-            </Slider>
-
-        )
-    }
+        </Slider>
+    )
 }
 
-
 ImgSlider.propTypes = {}
+
 export default ImgSlider

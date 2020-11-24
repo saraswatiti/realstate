@@ -10,10 +10,11 @@ import { Row, Col } from 'antd';
 **/
 
 class Banner extends Component {
+
     render() {
         return (
             <>
-                <HeroSection style={{ backgroundImage: "url(" + `${backgorud}` + ")" }}>
+                <HeroSection style={{ backgroundImage: `url(${backgorud})` }}>
                     <RelativeContainer>
                         <Row justify="center">
                             <Col lg={15}>

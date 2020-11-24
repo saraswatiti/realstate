@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 /**
 * @author
@@ -8,6 +7,7 @@ import PropTypes from 'prop-types'
 
 class SearchResult extends Component {
     state = {}
+
     render() {
         return (
             <div>SearchResult</div>
@@ -15,6 +15,6 @@ class SearchResult extends Component {
     }
 }
 
-
 SearchResult.propTypes = {}
+
 export default SearchResult

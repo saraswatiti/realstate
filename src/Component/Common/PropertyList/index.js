@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types'
-import * as PropertyListService from '../../../service/PropertyListService'
 import axios from 'axios';
-import { rentalnow_api_url } from '../../../config';
+import config from '../../../config';
 import Listing from '../../Listing';
-
 
 /**
 * @author
@@ -19,22 +16,19 @@ class PropertyList extends Component {
         };
     }
 
-
     async componentDidMount() {
         try {
-            const result = await axios.get(`${rentalnow_api_url}/houses?offset=1`)
+            const result = await axios.get(`${config.baseURL}/houses?offset=1&limit=12`)
                 .then(res => {
                     const houses = res.data.data;
                     this.setState({ houses });
                 })
+
             return result;
 
-        } catch{
+        } catch {
             console.error();
         }
-
-
-
     }
 
     render() {
@@ -46,6 +40,8 @@ class PropertyList extends Component {
     }
 }
 
+PropertyList.propTypes = {
 
-// PropertyList.propTypes = {}
+}
+
 export default PropertyList

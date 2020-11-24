@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { SectionWrapper } from '../../../style'
 
 /**
@@ -6,15 +6,13 @@ import { SectionWrapper } from '../../../style'
 * @class SectionWrap
 **/
 
-class SectionWrap extends Component {
+const SectionWrap = (props) => {
 
-    render() {
-        return (
-            <SectionWrapper>{this.props.children}</SectionWrapper>
-        )
-    }
+    return (
+        <SectionWrapper>{props.children}</SectionWrapper>
+    )
 }
 
-
 SectionWrap.propTypes = {}
+
 export default SectionWrap

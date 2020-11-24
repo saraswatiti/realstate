@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { CardWrap } from '../../../style'
 
 /**
@@ -7,13 +6,10 @@ import { CardWrap } from '../../../style'
 * @class Card
 **/
 
-class Card extends Component {
-    state = {}
-    render() {
-        return (
-            <CardWrap>{this.props.children}</CardWrap>
-        )
-    }
+const Card = () => {
+    return (
+        <CardWrap>{this.props.children}</CardWrap>
+    )
 }
 
 

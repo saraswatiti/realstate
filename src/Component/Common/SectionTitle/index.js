@@ -1,24 +1,20 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
 /**
 * @author
 * @class SectionTitle
 **/
 
-class SectionTitle extends Component {
+const SectionTitle = ({ sectionTitle }) => {
 
-    render() {
-        const { sectionTitle } = this.props;
-        return (
-            <header className="sectionheading">
-                <h2>{sectionTitle}</h2>
-            </header>
+    return (
+        <header className="sectionheading">
+            <h2>{sectionTitle}</h2>
+        </header>
 
-        )
-    }
+    )
 }
 
-
 SectionTitle.propTypes = {}
+
 export default SectionTitle

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { MenuCon, Container, MenuBar } from '../../../style';
-import { Row, Col, Button, Drawer } from 'antd';
+import { Button, Drawer } from 'antd';
 import Navigation from '../Navigation';
 import RightMenu from '../RightMenu';
 import VerticleMenu from '../VerticleMenu';
@@ -10,23 +10,22 @@ class MainHeader extends Component {
         current: 'home',
         visible: false
     }
+
     showDrawer = () => {
-        this.setState({
-            visible: true,
-        });
+        this.setState({ visible: true });
     };
+
     onClose = () => {
-        this.setState({
-            visible: false,
-        });
+        this.setState({ visible: false });
     };
+
     render() {
         return (
             <nav>
                 <MenuBar>
                     <Container className="Wrap">
                         <div className="logo">
-                            <a href="">RentalNow</a>
+                            <a href="/#">RentalNow</a>
                         </div>
                         <MenuCon>
                             <div className="leftMenu">
@@ -55,4 +54,5 @@ class MainHeader extends Component {
         )
     }
 }
+
 export default MainHeader;

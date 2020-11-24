@@ -13,7 +13,7 @@ const RightMenu = (props) => {
     return (
         <HeaderGroupAct>
             <div className='plist_wishlist'>
-                <a href="#"><FaRegHeart /><span className='count'>0</span></a>
+                <a href="/#"><FaRegHeart /><span className='count'>0</span></a>
             </div>
             <div className="site_header_account">
                 <Link to="">

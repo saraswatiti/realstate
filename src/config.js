@@ -1,3 +1,5 @@
-const rentalnow_api_url = 'http://rentalnow.kunwarj.com.np/api/v1/houses?offset=1';
+const config = {
+    baseURL: 'http://localhost:8000/api/v1'
+}
 
-export { rentalnow_api_url };
+export default config

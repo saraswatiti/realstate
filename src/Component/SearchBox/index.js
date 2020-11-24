@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { Input, Row, Col, Select, Slider, Button, Form } from 'antd';
-import { SearchWrap, Container } from '../../style';
 import props from 'prop-types';
+import { SearchWrap, Container } from '../../style';
+import { Input, Row, Col, Select, Button, Form } from 'antd';
 
 const { Option } = Select;
-
-
-
-
 
 class Searchbox extends Component {
     constructor(props) {
@@ -16,12 +12,15 @@ class Searchbox extends Component {
             searchKey: '',
         }
     }
+
     handleChange = (value) => {
         console.log(`selected ${value}`);
     }
+
     inputHandle = (e) => {
         this.setState(e.target.value);
     }
+
     handleSubmit = (evt) => {
         evt.preventDefault();
         props.history.push({
@@ -30,6 +29,7 @@ class Searchbox extends Component {
         })
 
     }
+
     render() {
         return (
             <SearchWrap>
@@ -56,4 +56,5 @@ class Searchbox extends Component {
         )
     }
 }
+
 export default Searchbox;
