@@ -1,0 +1,22 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+a{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #f93;
+}
+
+
+  .sectionheading h2{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .defaultpadding{
+    padding: 100px 0;
+  }
