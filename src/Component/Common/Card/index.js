@@ -6,9 +6,9 @@ import { CardWrap } from '../../../style'
 * @class Card
 **/
 
-const Card = () => {
+const Card = (props) => {
     return (
-        <CardWrap>{this.props.children}</CardWrap>
+        <CardWrap>{props.children}</CardWrap>
     )
 }
 
